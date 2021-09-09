@@ -1,4 +1,5 @@
 import drawn  from "../controllers/board.js";
+import hit from "../controllers/hit.js"
 
 export default class BoardView  {
 
@@ -30,13 +31,28 @@ export default class BoardView  {
 
     play() {
         if (this.board.playing) {
-            
-            this.clean()
-            this.draw()
-            this.board.ball.move()
+
+            this.clean();
+            this.draw();
+            this.checkCollisions();
+            this.board.ball.move();
+
 
         }
 
+    }
+
+    checkCollisions () {
+        for (let i = this.board.bars.length -1; i >= 0; i--) {
+
+            let bar = this.board.bars[i];
+            //Función hit validar la colisión
+            if(hit(bar, this.board.ball)){
+                this.board.ball.collision(bar)
+
+            }
+
+        }
     }
 
 }
