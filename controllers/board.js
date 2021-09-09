@@ -2,16 +2,19 @@
 
 export default function drawn(ctx,element){
 
-    if(element!== null && element.hasOwnProperty("kind") ){
-        switch(element.kind) {
-            case "square": 
-                ctx.fillRect(element.x,element.y,element.width,element.height);
-                break;
-            case "rectangulo": 
-                ctx.fillRect(element.x,element.y,element.width,element.height);
-                break;
-        }
+
+    switch(element.kind) {
+        case "rectangle": 
+            ctx.fillRect(element.x,element.y,element.width,element.height);
+            break;
+        case "circle": 
+            ctx.beginPath();
+            ctx.arc(element.x,element.y,element.radius,0,7);
+            ctx.fill();
+            ctx.closePath();
+            break;
     }
+    
 
 
 
