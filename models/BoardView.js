@@ -28,4 +28,15 @@ export default class BoardView  {
 
     }
 
+    play() {
+        if (this.board.playing) {
+            
+            this.clean()
+            this.draw()
+            this.board.ball.move()
+
+        }
+
+    }
+
 }
