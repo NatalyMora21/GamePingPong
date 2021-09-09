@@ -12,11 +12,15 @@ export default class BoardView  {
         this.ctx = canvas.getContext("2d")
     }
 
+    clean() {
+        this.ctx.clearRect(0,0,this.board.width,this.board.height);
+    }
+
     draw (){
 
         for (let i = this.board.elements.length-1; i>=0 ; i--) {
             //Barras laterales y pelota
-            console.log("prueba")
+            
             let element = this.board.elements[i];
             drawn(this.ctx, element)
             
