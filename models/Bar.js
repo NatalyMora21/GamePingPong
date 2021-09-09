@@ -7,12 +7,24 @@ export default class Bar{
         this.height = height;
         this.board = board;
         //Agregar todo el objeto
-        this.board.bars.push(this)
-        this.kind= "rectangulo"
+        this.board.bars.push(this);
+        this.kind= "rectangulo";
+        this.speed= 10;
     }
 
-    down() {}
+    down() {
+        this.y+= this.speed;
+        console.log("down"+ this.y)
+    }
 
-    up(){}
+    up(){
+        
+        this.y-= this.speed;
+        console.log("Upp"+ this.y)
+    }
+
+    toString(){
+        return "x: "+ this.x + " y: "+ this.y
+    }
     
 }
