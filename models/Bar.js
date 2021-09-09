@@ -8,7 +8,7 @@ export default class Bar{
         this.board = board;
         //Agregar todo el objeto
         this.board.bars.push(this);
-        this.kind= "rectangulo";
+        this.kind= "rectangle";
         this.speed= 10;
     }
 
