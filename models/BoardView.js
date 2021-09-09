@@ -1,4 +1,4 @@
-import { draw } from "../controllers/board.js";
+import drawn  from "../controllers/board.js";
 
 export default class BoardView  {
 
@@ -13,10 +13,12 @@ export default class BoardView  {
     }
 
     draw (){
-        for (let i = 0; i < this.board.elements.length; i++) {
+
+        for (let i = this.board.elements.length-1; i>=0 ; i--) {
             //Barras laterales y pelota
+            console.log("prueba")
             let element = this.board.elements[i];
-            draw(this.ctx, element)
+            drawn(this.ctx, element)
             
         }
 
