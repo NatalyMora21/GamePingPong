@@ -1,4 +1,4 @@
-class Board {
+export default class Board {
 
     constructor (width,height) {
 
@@ -11,11 +11,12 @@ class Board {
 
     }
 
-    getElmentos () {
-
+    get elements () {
+        //bars -> Barras lateras que controlan el juego
         let elementos= this.bars;
-        elementos.push(ball);
+        elementos.push(this.ball);
         return elementos;
 
     }
+
 }
