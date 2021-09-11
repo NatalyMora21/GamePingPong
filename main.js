@@ -1,9 +1,3 @@
-import Board from './models/Board.js'
-import BoardView from './models/BoardView.js'
-import Bar from './models/Bar.js'
-import Ball from './models/Ball.js';
-
-
 
 let board= new Board(800,400);
 var bar1 = new Bar(45,100,10,100, board);
@@ -49,17 +43,15 @@ document.addEventListener("keydown",(ev)=>{
 })
 
 boardViewn.draw();
-window.addEventListener("load",controller)
-window.requestAnimationFrame(controller)
+window.addEventListener("load",main)
+window.requestAnimationFrame(main)
 
 setTimeout(()=>{ball.direction=-1},4000)
 
-function controller () {
-    //console.log("prueb")
-    //
+function main () {
 
     boardViewn.play();
-    window.requestAnimationFrame(controller);
+    window.requestAnimationFrame(main);
     
 
 }

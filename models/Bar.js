@@ -1,4 +1,4 @@
-export default class Bar{
+class Bar{
 
     constructor(x,y,width,height,board){
         this.x = x;

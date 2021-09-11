@@ -1,4 +1,4 @@
-export default class Board {
+class Board {
 
     constructor (width,height) {
 

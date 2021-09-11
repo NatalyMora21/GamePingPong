@@ -1,4 +1,4 @@
-export default function hit (a,b ) {
+function hit (a,b ) {
     //Reacciona a la colisión
     let hit = false;
     if (b.x + b.width >= a.x && b.x < a.x +a.width) {

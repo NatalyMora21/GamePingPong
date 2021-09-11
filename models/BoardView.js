@@ -1,7 +1,4 @@
-import drawn  from "../controllers/board.js";
-import hit from "../controllers/hit.js"
-
-export default class BoardView  {
+ class BoardView  {
 
 
     constructor (canvas, board) {

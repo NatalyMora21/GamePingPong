@@ -1,6 +1,4 @@
-
-
-export default function drawn(ctx,element){
+function drawn(ctx,element){
 
 
     switch(element.kind) {
